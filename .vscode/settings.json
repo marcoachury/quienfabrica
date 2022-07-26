@@ -1,0 +1,19 @@
+{
+  "files.autoSave": "onFocusChange",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "emmet.variables": {
+    "lang": "es",
+    "charset": "UTF-8"
+  },
+  "prettier.arrowParens": "avoid",
+  "prettier.jsxBracketSameLine": true,
+  "prettier.printWidth": 100,
+  "prettier.trailingComma": "none",
+  "prettier.vueIndentScriptAndStyle": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "html.format.extraLiners": "head, body, /html, header, main, aside, section, article, footer"
+}

@@ -1,0 +1,57 @@
+footer {
+  background-color: white;
+  padding: 5px;
+  width: 100%;
+  margin: 10px, 0px;
+  /* background-image: image(fondo.png); */
+}
+
+nav {
+  background-color: orange;
+  padding: 5px;
+}
+
+article ul {
+  list-style-type: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 15px;
+  background-color: orange;
+  list-style-type: none;
+}
+
+article {
+  border: solid;
+  border-color: orange;
+  margin: 3px;
+  padding: 5px;
+  border-radius: 3px;
+  width: 90%;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+@media (min-width: 700px) {
+  article {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1000px) {
+  article {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
