@@ -14,6 +14,8 @@
 -- La idea es que la proxima version mande al servidor los datos de cada 
 -- registro una vez se procesa
 
+--with trace
+
 with batch
 without warning
 
@@ -26,33 +28,26 @@ include std/text.e
 include euphoria/info.e
 include std/net/url.e
 
+--trace(1)
 -- USER MODIFICABLE CONSTANTS.  FEEL FREE TO CUSTOMIZE YOUR PAGE
 -- Constantes modificables.  Se pueden usar para personalizar la pagina
 
+constant FORM_URL = "/ModeloFormImagen/formnuevaempresa.html"
 constant TITLE_FIELD = 3   -- Number of field (column) at CSV that will be used as article title
-
 constant CSV_FILE_NAME = "ansi.csv"
-
 constant PAGE_BEGIN= "Content-type: text/html\n\n" & --Keep this part
 		"<!DOCTYPE html>\n<meta charset=\"utf-8\">\n" & 
-		"<html>\n<head><link rel=\"stylesheet\" href=\"/style.css\">\n" & 
-		--Is important to check CSS File
+		"<html>\n<head><link rel=\"stylesheet\" href=\"/style.css\">\n" & --Is important to check CSS File
 		"<META NAME=\"keywords\" CONTENT=\"empresas, manufactura, servicios, colombia\">" & 
-		"<META NAME=\"robots\" CONTENT=\"all\"> <nav>Menu de opciones</nav></head> "
-		
-constant PAGE_BODY ="<body><h1>QuienFabrica.co</h1>\n<h2>Directorio</h2><p>Empresas de manufactura y servicios en Colombia</p><a href='/'>Agregar mi empresa (en construccion)</a></div>"
-
+		"<META NAME=\"robots\" CONTENT=\"all\"></head> "
+constant PAGE_BODY ="<body><h1>QuienFabrica.co</h1>\n<h2>Directorio</h2><p>Empresas de manufactura y servicios en Colombia</p><a href='" & FORM_URL & "'>Agregar mi empresa (en construccion)</a></div>"
 constant SEARCH_FORM = "<center><form align='center' method='post' action='/cgi-bin/pruebadb.cgi'>\n <input type='text' name='cadena'> <input type='submit' value='Buscar'></form></center>"
-
 constant formAgregar = "<form method='post' action= '/cgi-bin/pruebadb.cgi'> \n <input type = 'text' name='cadena'> <input type = 'submit' value ='Buscar'></form><br><br>"
-
 constant PAGE_FOOT = "</main><hr width=50%><footer>Marco Antonio Achury 2022<br>Running on Euphoria " & 
 		version_string() &  "aáeé</footer>"          
-
 constant PAGE_END= "</body>\n</html>\n\n"
 
 --END OF USER MODIFICABLE CONSTANTS. Fin de las constantes modificables
-
 
 procedure UserError(sequence msg)
 -- Report fatal error
@@ -88,7 +83,7 @@ end function
 
 procedure registro_arreglado(sequence registro) 
 	sequence salida =""
-		for i=6 to length (registro) do
+		for i=3 to length (registro) do
 			if length(registro[i])>0 then
 				if i = 12 then
 					puts(1, "<a target=\"_blank\" href=\"http://" & registro[i] & "\">Ver Web</a><br>\n")
@@ -114,7 +109,6 @@ function tokenizar (sequence datos)
 	sequence registro ={{}} --El registro actualmente en construcción
 	integer campoactual = 1
 	integer cadena =0 --No se está examinando una cadena
-	
 	if equal(datos, "") then
 		UserError("La funcion tokenizar no puede recibir cadenas vacias")
 	end if
@@ -146,12 +140,9 @@ function upper_SP(sequence texto)
 	if equal(texto, "") then
 		return ""
 	end if
-	
 --      texto =  upper(texto)  
-	
 	sequence MINUSCULAS = "ñáÁéÉíÍóÓúÚüÜ"
 	sequence MAYUSCULAS = "ÑAAEEIIOOUUUU"
-	
 	for j=1 to 13 do
 		for k=1 to length(texto) do
 			if equal(texto[k],MINUSCULAS[j]) then
@@ -161,13 +152,9 @@ function upper_SP(sequence texto)
 				--Terriblemente lento! Hay que hacerlo mas eficiente
 			end if
 		end for 
-		
 	end for
-
 	return texto
-
 end function
-
 
 function textos (sequence patron)
 -- Obtener datos de la base de datos
@@ -177,10 +164,8 @@ function textos (sequence patron)
 	sequence salida
 	integer cuantos = 0
 	integer ArchivoAbierto
-
 	--Carga la base de datos a la memoria
 	database=read_lines(CSV_FILE_NAME)
-
 	--Aca se filtra?? Antes de tokenizar
 	if atom(database) then  --read_lines devuelve -1 si no encontró el arhivo 
 		UserError("Archivo de datos no encontrado!!!!!<br>")
@@ -188,14 +173,8 @@ function textos (sequence patron)
 		if not equal(patron, "") then
 			sequence PatronMayuscula = upper_SP((patron))
 			puts(1, "PatronMayuscula = " & PatronMayuscula & "<br>")
-		
 			for i=2 to length (database) do
 				if match(PatronMayuscula, upper_SP(database[i])) then
-					
-					--alida = tokenizar(database[i])
-					--mprime_registro(database[i])
-					---printf(1, "coincidencia %d <br>", i)
-					--uantos=cuantos+1
 					cuantos=cuantos+1
 				salida=tokenizar(database[i])
 				imprime_registro(salida)
@@ -208,8 +187,7 @@ function textos (sequence patron)
 				imprime_registro(salida)
 			end for
 		end if 	
-	end if
-	
+	end if	
 	return cuantos
 end function
 
@@ -217,43 +195,33 @@ procedure ImprimeSeccionMain()
 	object busqueda
 	sequence datos, patron
 	integer coincidencias = 0
-	
 	busqueda=getPost() --Buscar casilla de busqueda
-
 	patron=""
 	if length(busqueda) > 7 then  --Se supone que los 7 primeros caracteres son "cadena="
 		patron = busqueda[8..$]
 		patron = url:decode(patron)
 	end if  
-	
 	-- datos= textos(patron) -- Antes pasaba todo el arreglo
-	
 	  --Ahora solo pasa la linea con el registro a evaluar
 	puts(1, "<main>")
-
 	coincidencias = textos(patron)  --Busca e imprime los registros, devuelve coincidencias
-	
 	puts(1, "</main>")
 	if coincidencias > 1 then
 		printf(1,"<p>Encontradas %d coincidencias" ,{coincidencias})
 	else
 		puts(1, "<p>No se encontraron coincidencias para " & patron & "</p>") 
 	end if
-	
-	
 end procedure
 
 procedure principal()
 	puts(1, PAGE_BEGIN)
 	puts(1, PAGE_BODY)
 	puts(1, SEARCH_FORM)
-	
 	ImprimeSeccionMain()  --Print database records: Aca es donde todo ocurre
-	
 	puts(1, PAGE_FOOT)
 	puts(1, PAGE_END)      
 end procedure
 
-
+-- main()
 principal()
 abort(0)

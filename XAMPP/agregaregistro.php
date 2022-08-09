@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <meta charset="utf-8">
 <html>
 	<head>
@@ -10,16 +9,33 @@
 	</head>
 		
 <body>
-<h1>QuienFabrica.co</h1>
 
+<main>
+
+	<h1>QuienFabrica.co</h1>
+
+<p>
 <?php
 
-if (isset($_POST)){
-	echo("Recibidos datos via post");
-}else
-{
-	echo("<article>No se recibieron datos de formulario.  Por favor vuelva a intentar.</article>");
+if (isset($_POST["registro"]))	{
+		$Registro = $_POST["registro"];
+		echo("Gracias por contactarnos.  Estos son los datos introducidos:<br>"& $Registro & "<br>
+	Guardando registro...\n<br>");
+} else{
+	echo("No recibido ningun registro");
+}
 	
-};
+
+?>
+
+</main>
+<footer><hr width=50%>Marco Antonio Achury 2022<br>
+</footer>
+</body>
+</html>
+
+</body></html>
+
+
 
 

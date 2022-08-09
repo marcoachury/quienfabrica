@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <meta charset="utf-8">
 <html>
 	<head>
@@ -15,7 +14,7 @@
 Gracias por contactarnos.  Estos son los datos introducidos, por favor verifique todo antes de guardar.
 <?php
 
-$Registro ='"","",';  #cATEGORIA Y SUBCATEGORIA POR DEFINIR
+$Registro = '","","';  #cATEGORIA Y SUBCATEGORIA POR DEFINIR
 
 if (isset($_POST["nombre"]))	{echo ("\n<br>Nombre del negocio: ".$_POST["nombre"]); $Registro = '"'.$Registro.$_POST["nombre"].'","';}
 if (isset($_POST["contacto1"]))	{echo ("\n<br>Persona contacto 1: ".$_POST["contacto1"]); $Registro = $Registro.$_POST["contacto1"].'","';}
@@ -38,8 +37,25 @@ if (isset($_POST["whatsapp"]))	{echo ("\n<br>numero WhatsApp: ".$_POST["whatsapp
 
 /* El $Registro puede contener dobles comillas ¿Eliminarlas? */
 
-echo("\n<br><br>[DEBUG]El registro es: ".$Registro);  
+echo("\n<br><br>[DEBUG]El registro es: ".$Registro."\n<br>");  
 # Solo para debug, esto no debería presentarse al usuario
+?>
+<form action="/ModeloFormImagen/agregaregistro.php" method="POST" enc="application/x-www-form-urlencoded">
+	<input type="hidden" name="registro" value = '<?php echo($Registro);?>'>
+	Confirmado, quiero guardar los datos <input type ="submit" >
+</form>
+<br><br>
+<form action="/ModeloFormImagen/formnuevaempresa.html" method="POST">
+	Regresar al formulario 
+<input type = "submit">
+</form>
+<br><br>
+</main>
+<footer><hr width=50%>Marco Antonio Achury 2022<br>
+</footer>
+</body>
+</html>
 
+</body></html>
 
 
