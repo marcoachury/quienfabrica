@@ -6,10 +6,9 @@
 -- Presenta los datos de un archivo CSV en forma de una 
 -- pagina web donde cada registro se presenta en forma de una "tarjeta"
 --
--- Tiene un error de diseño, espero corregirlo en una proxima version es 
--- lento para archivos grandes, porque primero procesa todo el archivo y 
--- genera la pagina.  Hasta no tenerlo procesado no manda al servidor 
--- los datos a imprimir.
+-- La primera version era lento para archivos grandes, porque primero procesa 
+-- todo el archivo y genera la pagina.  Hasta no tenerlo procesado no 
+-- manda al servidor los datos a imprimir.
 --
 -- La idea es que la proxima version mande al servidor los datos de cada 
 -- registro una vez se procesa

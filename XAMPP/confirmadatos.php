@@ -40,12 +40,15 @@ if (isset($_POST["whatsapp"]))	{echo ("\n<br>numero WhatsApp: ".$_POST["whatsapp
 echo("\n<br><br>[DEBUG]El registro es: ".$Registro."\n<br>");  
 # Solo para debug, esto no debería presentarse al usuario
 ?>
-<form action="/ModeloFormImagen/agregaregistro.php" method="POST" enc="application/x-www-form-urlencoded">
+<form action="agregaregistro.php" method="POST" enc="application/x-www-form-urlencoded">
 	<input type="hidden" name="registro" value = '<?php echo($Registro);?>'>
+	<input type="hidden" name="nombre" value = '<?php echo($_POST["nombre"]);?>'>
+	
+	
 	Confirmado, quiero guardar los datos <input type ="submit" >
 </form>
 <br><br>
-<form action="/ModeloFormImagen/formnuevaempresa.html" method="POST">
+<form action="formnuevaempresa.html" method="POST">
 	Regresar al formulario 
 <input type = "submit">
 </form>
