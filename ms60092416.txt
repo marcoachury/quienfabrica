@@ -1,5 +1,0 @@
-﻿{
-  "Description": "Archivo de comprobación de propiedad del dominio para Microsoft 365: colocar en la raíz del sitio web",
-  "Domain": "quienfabrica.co",
-  "Id": "ea594d40-a0d3-4dc3-b093-916badebafb5"
-}
