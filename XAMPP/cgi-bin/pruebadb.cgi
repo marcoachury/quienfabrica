@@ -6,9 +6,10 @@
 -- Presenta los datos de un archivo CSV en forma de una 
 -- pagina web donde cada registro se presenta en forma de una "tarjeta"
 --
--- La primera version era lento para archivos grandes, porque primero procesa 
--- todo el archivo y genera la pagina.  Hasta no tenerlo procesado no 
--- manda al servidor los datos a imprimir.
+-- Tiene un error de diseño, espero corregirlo en una proxima version es 
+-- lento para archivos grandes, porque primero procesa todo el archivo y 
+-- genera la pagina.  Hasta no tenerlo procesado no manda al servidor 
+-- los datos a imprimir.
 --
 -- La idea es que la proxima version mande al servidor los datos de cada 
 -- registro una vez se procesa
@@ -31,7 +32,7 @@ include std/net/url.e
 -- USER MODIFICABLE CONSTANTS.  FEEL FREE TO CUSTOMIZE YOUR PAGE
 -- Constantes modificables.  Se pueden usar para personalizar la pagina
 
-constant FORM_URL = "/ModeloFormImagen/formnuevaempresa.html"
+constant FORM_URL = "/formnuevaempresa.html"
 constant TITLE_FIELD = 3   -- Number of field (column) at CSV that will be used as article title
 constant CSV_FILE_NAME = "ansi.csv"
 constant PAGE_BEGIN= "Content-type: text/html\n\n" & --Keep this part
@@ -39,7 +40,7 @@ constant PAGE_BEGIN= "Content-type: text/html\n\n" & --Keep this part
 		"<html>\n<head><link rel=\"stylesheet\" href=\"/style.css\">\n" & --Is important to check CSS File
 		"<META NAME=\"keywords\" CONTENT=\"empresas, manufactura, servicios, colombia\">" & 
 		"<META NAME=\"robots\" CONTENT=\"all\"></head> "
-constant PAGE_BODY ="<body><h1>QuienFabrica.co</h1>\n<h2>Directorio</h2><p>Empresas de manufactura y servicios en Colombia</p><a href='" & FORM_URL & "'>Agregar mi empresa (en construccion)</a></div>"
+constant PAGE_BODY ="<body><h1>QuienFabrica.co</h1>\n <h2>Directorio</h2> <p>Empresas de manufactura y servicios en Colombia</p><a href='" & FORM_URL & "'>Agregar mi empresa (en construccion)</a></div><script async  src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4142680754981493\" crossorigin=\"anonymous\"></script>"
 constant SEARCH_FORM = "<center><form align='center' method='post' action='/cgi-bin/pruebadb.cgi'>\n <input type='text' name='cadena'> <input type='submit' value='Buscar'></form></center>"
 constant formAgregar = "<form method='post' action= '/cgi-bin/pruebadb.cgi'> \n <input type = 'text' name='cadena'> <input type = 'submit' value ='Buscar'></form><br><br>"
 constant PAGE_FOOT = "</main><hr width=50%><footer>Marco Antonio Achury 2022<br>Running on Euphoria " & 
