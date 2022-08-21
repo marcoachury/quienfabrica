@@ -1,4 +1,4 @@
-Los archivos de esta carpeta deberían estar un servidor apache con php (Ejemplo XAMPP)
+Los archivos de esta carpeta deberían en un servidor apache con php (Ejemplo XAMPP)
 
 Para ejecutar los scripts cgi-bin debe instalarse el lenguaje euphoria, preferiblementa la version 4.1
 
