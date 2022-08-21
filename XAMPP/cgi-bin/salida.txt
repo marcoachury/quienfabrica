@@ -1,0 +1,127 @@
+Content-type: text/html
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head><link rel="stylesheet" href="/style.css">
+<META NAME="keywords" CONTENT="empresas, manufactura, servicios, colombia"><META NAME="robots" CONTENT="all"></head> <body><h1>QuienFabrica.co</h1>
+ <h2>Directorio</h2> <p>Empresas de manufactura y servicios en Colombia</p><a href='/formnuevaempresa.html'>Agregar mi empresa (en construccion)</a></div><script async  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4142680754981493" crossorigin="anonymous"></script><center><form align='center' method='post' action='/cgi-bin/pruebadb.cgi'>
+ <input type='text' name='cadena'> <input type='submit' value='Buscar'></form></center><main><article><h4></h4>Alojamiento, observación de aves, senderismo<br>
+</article>
+<article><h4></h4>Alojamiento, áreas verdes<br>
+</article>
+<article><h4></h4>Alojamiento, áreas verdes, senderos, camping, cabalgatas.<br>
+</article>
+<article><h4></h4>Alojamiento, restaurante, juegos, piscina, Eventos, cabalgatas, piscina natural, cascada, cultura del arroz, museo, hamacas.<br>
+</article>
+<article><h4></h4>Senderismo, observación de aves.<br>
+</article>
+<article><h4></h4></article>
+<article><h4></h4>Caminatas, ecotalleres, balneario natural, avistamiento de aves, agrocultura, alimentación.<br>
+</article>
+<article><h4></h4>Avistamiento de aves, agricultura biológica, caminatas.<br>
+</article>
+<article><h4></h4>Turismo, Avistamiento de aves, Agroindustria, Artesania.<br>
+</article>
+<article><h4></h4>Red de reservas naturales privadas, ofrece información de varios sitios interesantes para visitar.<br>
+</article>
+<article><h4></h4>Operador turistico, avistamiento de aves, naturaleza y cultura.<br>
+</article>
+<article><h4></h4>Pasadia, hospedaje, kiosko de hamacas, piscina, zona de camping, parque infantil, cancha microfutbol-baloncesto, programación de eventos familiares y empresariales<br>
+</article>
+<article><h4></h4>Alojamiento, piscina, camping, sendero ecologico<br>
+</article>
+<article><h4></h4>El Salado, Entrada Mandrake<br>
+Bario El Salado, Entrada Mandrake 500 metros<br>
+Cabañas, camping, piscinas, minifutbol, minitejo, salon recepciones, restaurante, zonas verdes<br>
+</article>
+<article><h4></h4>Piscina, restaurante, Canchas de tejo, Hospedaje, Zona camping, Reuniones empresariales<br>
+</article>
+<article><h4></h4>Gym natural, cabañas temáticas, piscinas, piscina natural, Volleyplaya, Minitejo, hidroterapia, sauna, billar, hamacas, aquavol<br>
+</article>
+<article><h4></h4>Planes turisticos, Turismo cultural, Ruta nevados, ruta rio magdalena, Turismo de naturaleza<br>
+</article>
+<article><h4></h4>Cra 5 No 14-42 Edificio Portal de la Quinta, Oficina 03<br>
+</article>
+<article><h4></h4>Artesania, confección, crochet, tejidos a mano<br>
+</article>
+<article><h4></h4></article>
+<article><h4></h4></article>
+<article><h4></h4></article>
+<article><h4></h4></article>
+<article><h4></h4></article>
+<article><h4></h4>Diseñadora de modas, ropa deportiva<br>
+</article>
+<article><h4></h4>Accesorios, adornos, hebillas para el cabello.<br>
+</article>
+<article><h4></h4>Bolsos, cuero, accesorios<br>
+</article>
+<article><h4></h4>Accesorios, adornos, hebillas para el cabello.<br>
+</article>
+<article><h4></h4>Bolsos, cuero, accesorios<br>
+</article>
+<article><h4></h4>Fajas, masajeadores, masajes.<br>
+</article>
+<article><h4></h4>Fajas posquirurgica, uso diario, maternas, posparto.<br>
+</article>
+<article><h4></h4>Gorras, llaveros, etiquetas, marquillas tejidas y estampadas<br>
+</article>
+<article><h4></h4>Pinturas al oleo, Manualidades.<br>
+</article>
+<article><h4></h4>Fajas posquirurgica, uso diario, maternas, posparto.<br>
+</article>
+<article><h4></h4>Tutu, hebillas, cintas, manualidades.<br>
+</article>
+<article><h4></h4>Sonido, chiquiteca, pirotecnia, decoración, artistas, fotografía, filmación.<br>
+</article>
+<article><h4></h4>Piñatas, regalos, decoraciones para fiestas<br>
+</article>
+<article><h4></h4>Pijamas, camisetas, estampados.<br>
+</article>
+<article><h4></h4>Camisetas, polos, confección<br>
+</article>
+<article><h4></h4>Hilos, materias primas<br>
+</article>
+<article><h4></h4>Confección, camisetas.<br>
+</article>
+<article><h4></h4></article>
+<article><h4></h4></article>
+<article><h4></h4>Bufandas, tejidos, crochet<br>
+</article>
+<article><h4>Crear Dotaciones J,J,</h4>Crear Dotaciones J,J,<br>
+Dotaciones, Seguridad Industrial<br>
+</article>
+<article><h4></h4>Impresoras, plotter, tintas, papel sublimación<br>
+</article>
+<article><h4></h4>Camisetas, morrales, patinetas<br>
+</article>
+<article><h4></h4>Pantalonetas, estampados, diseño<br>
+</article>
+<article><h4></h4>Alojamiento, salon de fiestas, eventos, piscina, juegos.<br>
+</article>
+<article><h4></h4>Manualidades, materiales para foamy, estampados, señalización, sublimación, mugs<br>
+</article>
+<article><h4></h4></article>
+<article><h4></h4>Persianas, cortinas, bambulitas, enrrollables, venta, instalación, reparación, lavado.<br>
+</article>
+<article><h4></h4>Transformadores, venta, diagnostico, mantenimiento, termografía IR, ultrasonido para redes eléctricas y aplicaciones industriales, Ensayos no destructivos, Mantenimiento predictivo CBM.<br>
+</article>
+<article><h4></h4>Insumos para fabricación de bolsos y calzado, herrajes, cierres, botones, herrajes, reatas.<br>
+</article>
+<article><h4></h4></article>
+<article><h4></h4>Filtros y sistemas de tratamiento de agua potable, venta, servicio técnico y repuestos.<br>
+</article>
+<article><h4></h4>Piñatas, regalos, decoraciones para fiestas<br>
+</article>
+<article><h4></h4>Harinas, grasas, levaduras, moldes, chocolates, materiales para panadería y pastelería<br>
+</article>
+<article><h4></h4></article>
+<article><h4></h4>Transportes, Taxi, camionetas, encomiendas, expresos nacionales, despertador, venta de repuestos.<br>
+</article>
+<article><h4></h4>Vidrios, espejos, señalización, trofeos, tallas, sandblasting, divisiones en cristal y aluminio.<br>
+</article>
+<article><h4></h4></article>
+</main><p>Encontradas 62 coincidencias</main><hr width=50%><footer>Marco Antonio Achury 2022<br>Running on Euphoria 4.1.0 development (6300:57179171dbed, 2015-02-02 14:18:53)aáeé</footer></body>
+</html>
+
+
