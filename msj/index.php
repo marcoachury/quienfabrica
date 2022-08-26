@@ -21,9 +21,15 @@ if (isset($_GET["numero"])){
 		echo "<center><article><h1>Enlaces generados</h1><p>";
 		$numerolargo = $codigo.$numero;
 		echo "Numero telefónico:<br> +". $codigo."-".$numero."<br><br>\n";
+		$Wasap = 'https://wa.me/' . $numerolargo .'/?text=' . $texto;  //Enlace para whatsapp
+		$Teleg = 'https://t.me/+' . $numerolargo;
 		
-		echo '<a href="https://wa.me/' . $numerolargo .'/?text=' . $texto . '" target="_blank"><img src="WhatsApp_logo.svg" width = 54><br>Mensaje a WhatsApp</a><br><br>';
-		echo '<a href="https://t.me/+' . $numerolargo .'/?text=' . $texto . '"><img src="Telegram_logo.svg" width = 50><br>Mensaje a Telegram</a><br><p>Si esta página resulta útil, recuerda agregarla a los favoritos del navegador.</p></article></center><br>';
+		
+		echo '<a href="'.$Wasap.'" target="_blank"><img src="WhatsApp_logo.svg" width = 54><br>Enlace a WhatsApp:<br>'.
+		$Wasap.'</a>'.'<br><br>'
+		
+		echo '<a href="' .$Teleg . '"><img src="Telegram_logo.svg" width = 50><br>Enlace a Telegram:<br>'.
+		$Teleg.'<br></a><br><p>Si esta página resulta útil, recuerda agregarla a los favoritos del navegador.</p></article></center><br>';
 	}
 }
 
