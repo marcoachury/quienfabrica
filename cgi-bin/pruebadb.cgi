@@ -32,26 +32,26 @@ include std/net/url.e
 -- USER MODIFICABLE CONSTANTS.  FEEL FREE TO CUSTOMIZE YOUR PAGE
 -- Constantes modificables.  Se pueden usar para personalizar la pagina
 
-constant FORM_URL = "/formnuevaempresa.html"
+constant FORM_URL = "/formnuevaempresa.html"  --url del formulario de agregar empresa
 constant TITLE_FIELD = 3   -- Number of field (column) at CSV that will be used as article title
-constant CSV_FILE_NAME = "ansi.csv"
+constant CSV_FILE_NAME = "./ansi.csv"
 constant PAGE_BEGIN= "Content-type: text/html\n\n" & --Keep this part
-		"<!DOCTYPE html>\n<meta charset=\"utf-8\">\n" & 
-		"<html>\n<head><link rel=\"stylesheet\" href=\"/style.css\">\n" & --Is important to check CSS File
+		"<!DOCTYPE html>\n\r\r\r<meta charset=\"utf-8\">\n\r\r\r" & 
+		"<html>\n\r\r\r<head><link rel=\"stylesheet\" href=\"/style.css\">\n\r\r\r" & 
 		"<META NAME=\"keywords\" CONTENT=\"empresas, manufactura, servicios, colombia\">" & 
 		"<META NAME=\"robots\" CONTENT=\"all\"></head> "
-constant PAGE_BODY ="<body><h1>QuienFabrica.co</h1>\n <h2>Directorio</h2> <p>Empresas de manufactura y servicios en Colombia</p><a href='" & FORM_URL & "'>Agregar mi empresa (en construccion)</a></div><script async  src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4142680754981493\" crossorigin=\"anonymous\"></script>"
-constant SEARCH_FORM = "<center><form align='center' method='post' action='/cgi-bin/pruebadb.cgi'>\n <input type='text' name='cadena'> <input type='submit' value='Buscar'></form></center>"
-constant formAgregar = "<form method='post' action= '/cgi-bin/pruebadb.cgi'> \n <input type = 'text' name='cadena'> <input type = 'submit' value ='Buscar'></form><br><br>"
-constant PAGE_FOOT = "</main><hr width=50%><footer>Marco Antonio Achury 2022<br>Running on Euphoria " & 
-		version_string() &  "aáeé</footer>"          
-constant PAGE_END= "</body>\n</html>\n\n"
+constant PAGE_BODY ="<body><h1>QuienFabrica.co</h1>\n\r\r\r <h2>Directorio</h2> <p>Empresas de manufactura y servicios en Colombia</p><a href='" & FORM_URL & "'>Agregar mi empresa (en construccion)</a></div><script async  src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4142680754981493\" crossorigin=\"anonymous\"></script>"
+constant SEARCH_FORM = "<center><form align='center' method='post' action='/cgi-bin/pruebadb.cgi'>\n\r\r\r <input type='text' name='cadena'> <input type='submit' value='Buscar'></form></center>"
+constant formAgregar = "<form method='post' action= '/cgi-bin/pruebadb.cgi'> \n\r\r\r <input type = 'text' name='cadena'> <input type = 'submit' value ='Buscar'></form><br><br>"
+constant PAGE_FOOT = "</main><hr width=50%><footer>QuienFabrica.co 2022<br>Running on Euphoria " & 
+		version_string() &  "</footer>"          
+constant PAGE_END= "</body>\n\r\r\r</html>\n\r\r\r\n\r\r\r"
 
 --END OF USER MODIFICABLE CONSTANTS. Fin de las constantes modificables
 
 procedure UserError(sequence msg)
 -- Report fatal error
-    puts(1, "<p>Error: " & msg & "\n<br>" & PAGE_FOOT & PAGE_END)
+    puts(1, "<p>Error: " & msg & "\n\r\r\r<br>" & PAGE_FOOT & PAGE_END)
 	--Write to error log??
     abort(0)
 end procedure
@@ -86,9 +86,9 @@ procedure registro_arreglado(sequence registro)
 		for i=3 to length (registro) do
 			if length(registro[i])>0 then
 				if i = 12 then
-					puts(1, "<a target=\"_blank\" href=\"http://" & registro[i] & "\">Ver Web</a><br>\n")
+					puts(1, "<a target=\"_blank\" href=\"http://" & registro[i] & "\">Ver Web</a><br>\n\r\r\r")
 				else
-					puts(1, registro[i] & "<br>\n")
+					puts(1, registro[i] & "<br>\n\r\r\r")
 				end if
 			end if
 		end for
@@ -97,7 +97,7 @@ end procedure
 procedure imprime_registro(sequence registro)                   
 		puts(1, "<article><h4>" & registro[TITLE_FIELD] & "</h4>")
 		registro_arreglado(registro)
-		puts(1, "</article>\n")
+		puts(1, "</article>\n\r\r\r")
 		flush(1)
 end procedure
 
@@ -135,7 +135,7 @@ function tokenizar (sequence datos)
 	return registro
 end function
 
-function upper_SP(sequence texto)
+function upper_SP(sequence texto) --Prueba para convertir a mayusculas textos
 	sequence salida
 	if equal(texto, "") then
 		return ""
@@ -186,8 +186,8 @@ function textos (sequence patron)
 				salida=tokenizar(database[i])
 				imprime_registro(salida)
 			end for
-		end if 	
-	end if	
+		end if  
+	end if  
 	return cuantos
 end function
 

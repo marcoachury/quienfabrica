@@ -3,17 +3,22 @@
 {
 	background-color: white;
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+	padding: 2px;
+	padding: 1px;
 	
 	}
 	
-	
+body main
+{
+	background-color: white;
+	border-radius: 2px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}	
 
 header, footer
 {
 	background-color: white;
-	padding:5px;
+	padding:4px;
 	width: 100%;
 	margin: 10px, 10px;
 	#background-image:image(fondo.png);
@@ -25,7 +30,7 @@ nav
 {
 	width: 96%;
 	background-color: orange; 
-	padding: 5px;	
+	padding: 3px;	
 }
 
 
@@ -52,19 +57,12 @@ nav li
 	list-style-type: none;
 }
 
-body main
-{
-	background-color: white;
-	border-radius: 3px;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 article 
 {
 	border: solid;
 	border-color: orange;
 	margin: 3px;
-	padding: 5px;
+	padding: 3px;
 	border-radius: 3px;
 	width: 90%;	
 }
@@ -73,7 +71,7 @@ a:link {
 	text-decoration: none;
   }
   
-  a:visited {
+a:visited {
 	text-decoration: none;
   }
   
@@ -83,18 +81,16 @@ a:hover
   color: white;
 }
 
-
 main{
 	display: flex;
 	flex-wrap: wrap;
 	background-color: white;  
 }
 
-
 @media (min-width: 700px) 
 {
 	article {
-		width:45%;
+	width:45%;
 	}
 }
 

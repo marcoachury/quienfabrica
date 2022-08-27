@@ -18,7 +18,9 @@ if (isset($_GET["numero"])){
 	$numero = $_GET["numero"];
 	$texto = $_GET["texto"];
 	if ($numero != ""){
-		echo "<center><article><h1>Enlaces generados</h1><p>";
+		echo ' <script async  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4142680754981493" crossorigin="anonymous\"></script> ';
+		echo "<br><center><article><h1>Enlaces generados</h1><p>";
+
 		$numerolargo = $codigo.$numero;
 		echo "Numero telefónico:<br> +". $codigo."-".$numero."<br><br>\n";
 		$Wasap = 'https://wa.me/' . $numerolargo .'/?text=' . $texto;  //Enlace para whatsapp
@@ -26,7 +28,7 @@ if (isset($_GET["numero"])){
 		
 		
 		echo '<a href="'.$Wasap.'" target="_blank"><img src="WhatsApp_logo.svg" width = 54><br>Enlace a WhatsApp:<br>'.
-		$Wasap.'</a>'.'<br><br>'
+		$Wasap.'</a>'.'<br><br>';
 		
 		echo '<a href="' .$Teleg . '"><img src="Telegram_logo.svg" width = 50><br>Enlace a Telegram:<br>'.
 		$Teleg.'<br></a><br><p>Si esta página resulta útil, recuerda agregarla a los favoritos del navegador.</p></article></center><br>';
@@ -36,12 +38,15 @@ if (isset($_GET["numero"])){
 ?>
 
 <h2>Generar enlaces para enviar mensaje a Telegram o WhatsApp</h2>
+
 <p>Usando este formulario como atajo, puedes mandar un mensaje de WhatsApp a cualquier numero telefónico sin tener que agregarlo a la libreta de direcciones del telefono</p>
+
 <form method="get" action=".">
 	Telefono destino: <br>
 	
 	<!-- All countries -->
-	Pais: <select id="pais" name="pais" default="57">
+	Pais:<br>
+	<select id="pais" name="pais" default="57">
 		<option value="57">Colombia +57</option>
 		<option>phone</option>
 		<option value="93">Afghanistan +93</option>
@@ -297,15 +302,22 @@ if (isset($_GET["numero"])){
 		<option value="260">Zambia +260</option>
 		<option value="263">Zimbabwe +263</option>
 	</select>
+
 	<br>
-	Numero: <input name="numero" type="number" ><br><br>
+	Numero:<br>
+	<input name="numero" type="number" width="80%" ><br>
 	Mensaje inicial (opcional, solo para WhatsApp):<br>
 	<input name="texto" type="texto" value="Saludos"><br><br>
 	
 	<input type="submit" value=" Enviar ">
 	<br>
 </form>
-<script async  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4142680754981493" crossorigin="anonymous\"></script>
+
+<?php
+if (isset($_GET["numero"]) and $_GET["numero"] != ""){
+echo ' <script async  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4142680754981493" crossorigin="anonymous"></script> ';}
+?>
+
 <foot>
 <hr>
 <br>
